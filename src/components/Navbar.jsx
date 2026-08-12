@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion'
-
-const PHONE_NUMBER = '966XXXXXXXXX'    // ← رقم الاتصال
-const WHATSAPP_NUMBER = '966XXXXXXXXX' // ← رقم الواتساب
-
+import {waLink,callLink}from "../constants/number.js"
+ 
 export default function Navbar() {
   return (
     <motion.nav
@@ -21,7 +19,7 @@ export default function Navbar() {
 
         {/* زر الاتصال — أيقونة فقط على الموبايل، نص على الديسكتوب */}
         <a
-          href={`tel:+${PHONE_NUMBER}`}
+          href={callLink}
           className="flex items-center gap-1.5 bg-cream/10 text-cream border border-cream/20 font-bold text-sm px-3 md:px-4 py-2 rounded-md hover:bg-cream/20 transition"
           aria-label="اتصل بنا"
         >
@@ -33,7 +31,7 @@ export default function Navbar() {
 
         {/* زر الواتساب — أيقونة فقط على الموبايل، نص على الديسكتوب */}
         <a
-          href={`https://wa.me/${WHATSAPP_NUMBER}`}
+          href={ waLink}
           target="_blank"
           rel="noreferrer"
           className="flex items-center gap-1.5 bg-gold text-darkBrown font-bold text-sm px-3 md:px-5 py-2 rounded-md hover:brightness-110 transition"

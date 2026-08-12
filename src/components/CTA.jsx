@@ -1,12 +1,8 @@
 import { motion } from 'framer-motion'
-
-const PHONE_NUMBER = '966XXXXXXXXX' // ← حط رقمك هنا
-const WHATSAPP_NUMBER = '966XXXXXXXXX' // ← حط رقمك هنا
-const WA_MESSAGE = 'السلام عليكم، أبي أعرف كم تسوى مكيفاتي.'
+import {waLink,callLink,WA_MESSAGE}from "../constants/number.js"
 
 export default function CTA() {
-  const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WA_MESSAGE)}`
-  const callLink = `tel:+${PHONE_NUMBER}`
+
 
   return (
     <section id="cta" className="bg-darkBrown relative overflow-hidden py-20 px-6 text-center">
@@ -64,7 +60,7 @@ export default function CTA() {
             transition={{ delay: 0.35 }}
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
-            className="inline-flex items-center gap-3 bg-cream/10 border border-cream/25 text-cream font-black text-lg px-8 py-4 rounded-lg hover:bg-cream/20 transition w-full sm:w-auto justify-center"
+            className="inline-flex items-center gap-3 bg-[red] border border-cream/25 text-cream font-black text-lg px-8 py-4 rounded-lg hover:bg-cream/20 transition w-full sm:w-auto justify-center"
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
