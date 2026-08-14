@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import {waLink,callLink}from "../constants/number.js"
- 
+ import {trackContact} from "../utils/helpers.js"
 export default function Navbar() {
   return (
     <motion.nav
@@ -20,6 +20,7 @@ export default function Navbar() {
         {/* زر الاتصال — أيقونة فقط على الموبايل، نص على الديسكتوب */}
         <a
           href={callLink}
+                onClick={() => trackContact('call')}
           className="flex items-center gap-1.5 bg-cream/10 text-cream border border-cream/20 font-bold text-sm px-3 md:px-4 py-2 rounded-md hover:bg-cream/20 transition"
           aria-label="اتصل بنا"
         >
@@ -33,6 +34,8 @@ export default function Navbar() {
         <a
           href={ waLink}
           target="_blank"
+                          onClick={() => trackContact('whatsapp')}
+
           rel="noreferrer"
           className="flex items-center gap-1.5 bg-gold text-darkBrown font-bold text-sm px-3 md:px-5 py-2 rounded-md hover:brightness-110 transition"
           aria-label="واتساب"
