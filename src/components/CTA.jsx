@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { trackContact } from '../utils/pixel.js' // أو مكان ملف pixel.js عندك
+import { trackContact } from '../utils/helpers.js' // أو مكان ملف pixel.js عندك
 
 // الأرقام والرسالة مدموجين هنا على طول
 const PHONE_NUMBER = "9660542218340"
